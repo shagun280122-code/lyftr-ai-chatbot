@@ -1,0 +1,307 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fc;
+  color: #202033;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.sidebar {
+  width: 250px;
+  background: #17172b;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 45px;
+}
+
+.brand-icon {
+  color: #a78bfa;
+  font-size: 32px;
+}
+
+.brand-light {
+  color: #a78bfa;
+}
+
+.new-chat {
+  background: #33334e;
+  border: 1px solid #555572;
+  color: white;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+}
+
+.new-chat:hover {
+  background: #414161;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid #393951;
+  padding-top: 22px;
+}
+
+.profile-icon {
+  background: #8b5cf6;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.sidebar-bottom strong,
+.sidebar-bottom small {
+  display: block;
+}
+
+.sidebar-bottom small {
+  color: #aaaac1;
+  margin-top: 3px;
+}
+
+.chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100vh;
+}
+
+.topbar {
+  height: 75px;
+  border-bottom: 1px solid #e8e8ef;
+  background: white;
+  padding: 0 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.online-dot {
+  color: #16a36a;
+  font-size: 12px;
+  margin-left: 15px;
+}
+
+.model-label {
+  color: #77778c;
+  font-size: 13px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 35px max(25px, 10%);
+}
+
+.welcome {
+  text-align: center;
+  margin: 35px 0 55px;
+}
+
+.welcome-icon {
+  background: #eee8ff;
+  color: #7950db;
+  font-size: 30px;
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.welcome h1 {
+  font-size: 32px;
+  margin: 22px 0 10px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.welcome p {
+  color: #85859a;
+  font-size: 15px;
+}
+
+.message-row {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+  align-items: flex-start;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #eee8ff;
+  color: #7950db;
+  font-weight: bold;
+}
+
+.user .avatar {
+  background: #e5e7eb;
+  color: #303044;
+}
+
+.message-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.message-content strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.message-content p {
+  color: #4f5064;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 15px;
+}
+
+.typing {
+  color: #888;
+  padding-top: 7px;
+  font-size: 14px;
+}
+
+.error {
+  background: #fff0f0;
+  color: #b42318;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin: 20px 0;
+  overflow-wrap: anywhere;
+}
+
+.composer-wrap {
+  padding: 20px max(25px, 10%) 25px;
+  background: #f8f9fc;
+}
+
+.composer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid #dedee9;
+  padding: 12px 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px #2020330b;
+}
+
+.composer:focus-within {
+  border-color: #9472e9;
+}
+
+.composer textarea {
+  flex: 1;
+  resize: none;
+  border: none;
+  outline: none;
+  font: inherit;
+  font-size: 15px;
+  min-height: 30px;
+  max-height: 120px;
+  background: transparent;
+  color: #202033;
+}
+
+.composer button {
+  background: #7950db;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.composer-wrap > small {
+  display: block;
+  color: #9999a9;
+  text-align: center;
+  font-size: 11px;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 65px;
+    padding: 20px 10px;
+    align-items: center;
+  }
+
+  .brand {
+    font-size: 0;
+    margin-bottom: 35px;
+  }
+
+  .new-chat {
+    font-size: 0;
+    width: 42px;
+    text-align: center;
+  }
+
+  .sidebar-bottom {
+    font-size: 0;
+  }
+
+  .sidebar-bottom small {
+    display: none;
+  }
+
+  .topbar {
+    padding: 0 15px;
+  }
+
+  .messages {
+    padding: 20px 15px;
+  }
+
+  .composer-wrap {
+    padding: 15px;
+  }
+
+  .welcome h1 {
+    font-size: 25px;
+  }
+}
